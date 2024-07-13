@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+    @apply h-full;
+}
+
+@layer components {
+    .nav-menu {
+        @apply block w-fit py-2 text-slate-400 font-medium hover:text-slate-900 transition duration-300;
+    }
+
+    .nav-menu.active-menu {
+        @apply text-slate-900;
+    }
+}
+
+@layer utilities {
+    .text-muted-foreground {
+        @apply text-[hsl(215.4_16.3%_46.9%)];
+    }
+}
