@@ -2,10 +2,16 @@
 <html lang="id">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tag -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keyword" content="ipkd, ipkd donggala, kabupaten donggala, donggala" />
     <meta name="description"
         content="Website Resmi Indeks Pengelolaan Keuangan Daerah Kabupaten Donggala Provinsi Sulawesi Tengah" />
+    <meta name="author" content="Indeks Pengelolaan Keuangan Daerah Kabupaten Donggala" />
+    <meta name="geo.placename" content="Indonesia" />
+
+    <x-favicon />
 
     {{-- fonts --}}
     <link rel="preconnect" href="https://fonts.bunny.net">
