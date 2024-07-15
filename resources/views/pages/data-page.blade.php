@@ -9,7 +9,7 @@
     <div class="pt-6 w-[512px] space-y-6">
         <div class="flex flex-col space-y-1.5">
             <h3 class="text-2xl font-semibold leading-none tracking-tight">Lampiran</h3>
-            <p class="text-sm text-muted-foreground">Dafter lampiran penunjang IPKD Kabupaten Donggala Provinsi Sulawesi
+            <p class="text-sm text-muted-foreground">Daftar lampiran penunjang IPKD Kabupaten Donggala Provinsi Sulawesi
                 Tengah.</p>
         </div>
 
