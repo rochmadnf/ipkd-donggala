@@ -10,9 +10,8 @@
         <div class="overflow-hidden px-8 rounded-md w-full">
             <h1 class="text-base md:text-xl font-semibold tracking-wider text-black/90 py-4" id="objectName">Nama
                 Lampiran</h1>
-            <object id="objectPreviewAttachment"
-                data="http://ipkd-donggala.test/2023/2CtCJpQmEKA5pPRnTMtmBiKHeSRsahnp2WsCwZ1s.pdf"
-                type="application/pdf" frameborder="0" width="100%" height="690px"></object>
+            <object id="objectPreviewAttachment" data="#" type="application/pdf" frameborder="0" width="100%"
+                height="690px"></object>
         </div>
     </div>
 </div>
