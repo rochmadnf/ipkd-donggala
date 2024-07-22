@@ -10,7 +10,6 @@ document
     });
 
 function openPreviewWindow(item) {
-    console.log(item);
     previewAttachment.classList.remove("hidden", "-z-[9999]");
     previewAttachment.classList.add("flex", "z-[9999]");
     attachmentObject.setAttribute("data", item.getAttribute("data-filepath"));
