@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\UploadFile;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -10,6 +11,7 @@ class DataPage extends Component
 {
     public function render()
     {
-        return view('pages.data-page');
+        $uploadedFiles = UploadFile::orderBy('sequence', 'ASC')->get();
+        return view('pages.data-page', compact('uploadedFiles'));
     }
 }

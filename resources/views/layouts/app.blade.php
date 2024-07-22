@@ -25,6 +25,7 @@
 </head>
 
 <body class="antialiased bg-slate-50 text-slate-900">
+    <x-preview-attachment />
     <main class="min-h-screen w-full flex flex-col justify-center items-center gap-y-6">
         <div
             class="bg-white min-w-[800px] min-h-[500px] rounded-2xl border border-slate-300/80 border-b-4 p-2 flex flex-row gap-x-6">

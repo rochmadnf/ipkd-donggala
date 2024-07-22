@@ -22,4 +22,12 @@ body,
     .text-muted-foreground {
         @apply text-[hsl(215.4_16.3%_46.9%)];
     }
+
+    .ring-ring {
+        @apply ring-[hsl(222.2_84%_4.9%)];
+    }
+
+    .ring-offest-background {
+        @apply ring-offset-[hsl(0_0%_100%)];
+    }
 }

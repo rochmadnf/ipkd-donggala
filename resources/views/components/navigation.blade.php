@@ -4,10 +4,10 @@
             wire:navigate @if (request()->routeIs('welcome')) aria-current="page" @endif>Beranda</a>
     </div>
     <div>
-        <a href="{{ route('data') }}" class="nav-menu {{ request()->routeIs('data') ? 'active-menu' : '' }}" wire:navigate
-            @if (request()->routeIs('data')) aria-current="page" @endif>Lampiran</a>
+        <a href="{{ route('attachments') }}" class="nav-menu {{ request()->routeIs('attachments') ? 'active-menu' : '' }}"
+            wire:navigate @if (request()->routeIs('attachments')) aria-current="page" @endif>Lampiran</a>
     </div>
     <div>
-        <a href="{{ env('WEB_PORTAL_URL') }}" class="nav-menu">Web Portal &nearr;</a>
+        <a href="{{ env('WEB_PORTAL_URL') }}" class="nav-menu">Web Portal</a>
     </div>
 </nav>
