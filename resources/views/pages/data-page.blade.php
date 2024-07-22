@@ -21,7 +21,7 @@
 
             <div class="overflow-y-auto rounded-md max-h-[275px] py-2 space-y-4">
                 @forelse($uploadedFiles as $file)
-                    <x-file-card :uploadedAt="$file->uploaded_at->translatedFormat('d M Y')" :filename="$file->sequence . '. ' . $file->name" :filepath="asset($file->filepath)" />
+                    <x-file-card :uploadedAt="$file->uploaded_at->translatedFormat('d M Y')" :filename="$file->sequence . '. ' . $file->name" :filepath="asset_storage($file->filepath)" />
                 @empty
                     <div class="flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50" role="alert">
                         <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true"
