@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+    @apply h-full;
+}
+
+@layer components {
+    .nav-menu {
+        @apply relative block px-2 text-gray-400 hover:text-gray-900;
+    }
+    .nav-menu.active {
+        @apply relative text-gray-900;
+    }
+    .nav-menu.active::before {
+        content: '';
+        @apply absolute bottom-0 left-[0.55rem] h-0.5 w-2 rounded-full bg-gray-900;
+    }
+}
+
+@layer utilities {
+    .text-muted {
+        @apply text-[hsl(215.4_16.3%_46.9%)];
+    }
+}

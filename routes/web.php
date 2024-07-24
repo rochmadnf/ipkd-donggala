@@ -1,10 +1,13 @@
 <?php
 
-use App\Http\Controllers\AttachmentController;
+use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controllers\WelcomeController::class, 'index'])->name('welcome');
 
-Route::get('/attachments', [AttachmentController::class, 'index'])->name('attachments');
+Route::get('/attachments', [Controllers\AttachmentController::class, 'index'])->name('attachments');
+
+Route::controller(Controllers\UploadFileController::class)->prefix('uploads')->group(function () {
+    Route::get('/', 'index')->name('index.file');
+    Route::post('/', 'store')->name('store.file');
+});
