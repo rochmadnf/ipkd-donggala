@@ -29,8 +29,6 @@
     </head>
 
     <body class="bg-gray-50 text-gray-900 antialiased">
-        <x-preview-attachment />
-
         <main class="flex min-h-screen w-full flex-col items-center justify-center gap-y-6">
             <div
                 class="flex h-[550px] w-[1024px] flex-row gap-x-6 rounded-2xl border border-b-4 border-slate-300/80 bg-white p-2"
