@@ -54,7 +54,9 @@
                             <x-nav-link :redirect="true" :redirectLink="env('URL_WEB_PORTAL')" label="Web Portal" />
                         </ul>
                     </nav>
-                    @yield('content')
+                    <div class="h-full w-full space-y-5 px-2 pt-4">
+                        @yield('content')
+                    </div>
                 </section>
             </div>
             <footer class="text-sm text-slate-500">
