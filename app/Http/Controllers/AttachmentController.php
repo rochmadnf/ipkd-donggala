@@ -11,7 +11,7 @@ class AttachmentController extends Controller
 {
     protected function getLastSeason(): int
     {
-        if (!is_null($lastSeason = UploadFile::orderBy('season', 'DESC')?->first()->season)) {
+        if (!is_null($lastSeason = UploadFile::orderBy('season', 'DESC')?->first()?->season)) {
             return (int) $lastSeason;
         }
 
