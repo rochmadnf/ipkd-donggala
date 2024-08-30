@@ -10,7 +10,7 @@
         Tengah."
     />
 
-    <form id="formYear" action="{{ route('attachments') }}" method="GET" class="flex flex-row items-center gap-x-4">
+    <form id="formYear" action="{{config('app.url')}}/attachments" method="GET" class="flex flex-row items-center gap-x-4">
         <button type="button" id="prevYear" class="rotate-180 hover:opacity-75">&#10132;</button>
         <input
             data-init-value="{{ $initSeason }}"
