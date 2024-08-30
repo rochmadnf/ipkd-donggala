@@ -32,7 +32,7 @@
     <div id="file-list" class="space-y-4 overflow-y-auto p-4 md:max-h-[320px]">
         @forelse ($files as $file)
             <x-card-file
-                :path="asset($file['filepath'])"
+                :path="asset('files/'.$file['filepath'])"
                 :name="$file['filename']"
                 :upload_date="$file['uploaded_at']->translatedFormat('d M Y')"
                 :order="$file['order']"

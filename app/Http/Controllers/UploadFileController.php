@@ -50,7 +50,7 @@ class UploadFileController extends Controller
             'uploaded_at' => \Carbon\Carbon::createFromFormat('Y-m-d', $validData['uploaded_at']),
             'season' => $validData['season'],
             'name' => $validData['name'],
-            'path' => 'files/' . $filePath,
+            'path' => $filePath,
             'sequence' => $this->getLastSequence($validData['season']),
         ]);
 
