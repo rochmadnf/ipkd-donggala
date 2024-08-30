@@ -27,7 +27,7 @@ const previewElement = (fileName, uploadedAt, urlPath) => {
                 <h3 class="text-sm text-gray-500">${uploadedAt}</h3>
             </div>
             <object
-                class="rounded-md"
+                class="rounded-md [@media(min-height:920px)]:h-[810px]"
                 data="${urlPath}"
                 type="application/pdf"
                 frameborder="0"

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\UploadFile;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UploadFileController extends Controller
 {
@@ -42,14 +43,14 @@ class UploadFileController extends Controller
         );
 
         // store file
-        $filePath = $request->file('path')->store('public/' .  $validData['season']);
+        $filePath = Storage::disk('attachment')->putFileAs($validData['season'], $request->file('path'), $validData['name'].".".$request->file('path')->getClientOriginalExtension());
 
         // store to DB
         UploadFile::create([
             'uploaded_at' => \Carbon\Carbon::createFromFormat('Y-m-d', $validData['uploaded_at']),
             'season' => $validData['season'],
             'name' => $validData['name'],
-            'path' => str_replace('public/', '', $filePath),
+            'path' => 'attachments/' . $filePath,
             'sequence' => $this->getLastSequence($validData['season']),
         ]);
 

@@ -23,7 +23,7 @@
         <a
             class="inline-flex items-center rounded-md bg-green-500 px-1.5 py-0.5 text-sm text-white transition duration-300 hover:opacity-75"
             href="{{ $path }}"
-            download="{{ str()->of($order . '. ' . $name)->slug() }}"
+            download="{{ $name . '.pdf' }}"
         >
             Unduh
         </a>
