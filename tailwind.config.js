@@ -13,6 +13,9 @@ export default {
             fontFamily: {
                 sans: ['Outfit', ...defaultTheme.fontFamily.sans],
             },
+            screens: {
+                s380: { min: '380px' },
+            },
         },
     },
     plugins: [require('@tailwindcss/typography')],

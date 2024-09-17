@@ -19,6 +19,14 @@ body,
         content: '';
         @apply absolute bottom-0 left-[0.55rem] h-0.5 w-2 rounded-full bg-gray-900;
     }
+
+    .bottom-nav {
+        @apply fixed bottom-0 left-0 z-[99] w-full bg-transparent md:hidden;
+    }
+
+    .bottom-nav > ul {
+        @apply s380:justify-center s380:gap-x-4 s380:px-4 s380:w-fit s380:rounded-t-xl mx-auto flex w-full justify-around rounded-none border border-slate-300/30 bg-white py-2;
+    }
 }
 
 @layer utilities {

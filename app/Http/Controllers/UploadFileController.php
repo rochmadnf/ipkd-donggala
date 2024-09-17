@@ -43,7 +43,7 @@ class UploadFileController extends Controller
         );
 
         // store file
-        $filePath = Storage::disk('attachment')->putFileAs($validData['season'], $request->file('path'), $validData['name'].".".$request->file('path')->getClientOriginalExtension());
+        $filePath = Storage::disk('attachment')->putFileAs($validData['season'], $request->file('path'), $validData['name'] . "." . $request->file('path')->getClientOriginalExtension());
 
         // store to DB
         UploadFile::create([
