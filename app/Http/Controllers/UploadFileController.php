@@ -30,10 +30,10 @@ class UploadFileController extends Controller
             [
                 'season' => ['bail', 'required', 'digits:4', 'int', 'min:1998', 'max:2110'],
                 'name' => ['bail', 'required', 'string', 'min:3'],
-                'path' => ['bail', 'required', 'file', 'mimetypes:application/pdf', 'max:76800'],
+                'path' => ['bail', 'required', 'file', 'mimetypes:application/pdf', 'max:204800'],
                 'uploaded_at' => ['bail', 'required', 'date', 'date_format:Y-m-d'],
             ],
-            ['path.max' => 'File maksimal 75MB', 'path.mimetypes' => 'Berkas harus berupa PDF.'],
+            ['path.max' => 'File maksimal 200MB', 'path.mimetypes' => 'Berkas harus berupa PDF.'],
             [
                 'uploaded_at' => 'Tanggal Unggah',
                 'season' => 'Tahun',
