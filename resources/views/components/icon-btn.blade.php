@@ -2,7 +2,7 @@
 
 @props(['route' => '#', 'label' => 'Unknown', 'activeSvg' => null, 'normalSvg' => null])
 @php
-    $active = sanitize_protocol(request()->fullUrl()) === sanitize_protocol($route);
+    $active = sanitize_protocol(request()->fullUrlWithoutQuery(['season'])) === sanitize_protocol($route);
 @endphp
 
 <li>

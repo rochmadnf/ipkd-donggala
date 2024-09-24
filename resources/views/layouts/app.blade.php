@@ -29,10 +29,10 @@
 
     <x-bottom-nav />
 
-    <main class="flex min-h-screen w-full flex-col items-center gap-y-6 md:justify-center">
+    <main class="flex min-h-screen w-full flex-col items-center gap-y-6 lg:justify-center">
         <div
-            class="flex flex-col bg-white pb-4 md:h-[550px] md:w-[1024px] md:flex-row md:gap-x-6 md:rounded-2xl md:border md:border-b-4 md:border-slate-300/80 md:p-2">
-            <aside class="space-y-8 bg-yellow-300 px-8 pb-8 pt-4 md:w-[350px] md:space-y-12 md:rounded-xl">
+            class="flex flex-col bg-white pb-4 max-w-[512px] lg:max-w-full lg:h-[550px] lg:w-[1024px] lg:flex-row lg:gap-x-6 lg:rounded-2xl lg:border lg:border-b-4 lg:border-slate-300/80 lg:p-2">
+            <aside class="space-y-8 bg-yellow-300 px-8 pb-8 pt-4 lg:w-[350px] lg:space-y-12 lg:rounded-xl">
                 <div
                     class="mx-auto flex w-fit flex-row items-center justify-center gap-x-2 rounded-xl bg-white px-4 py-2 [@media(min-width:400px)]:gap-x-4">
                     <img class="w-8" src="{{ asset('assets/icons/logo.png') }}" alt="logo" />
@@ -40,26 +40,26 @@
                         IPKD Kabupaten Donggala
                     </h2>
                 </div>
-                <img class="mx-auto w-60 opacity-85 md:w-full" src="@yield('illustration')" alt="illustration" />
-                <h3 class="text-center text-2xl font-bold uppercase tracking-wider md:text-3xl">
+                <img class="mx-auto w-60 opacity-85 lg:w-full" src="@yield('illustration')" alt="illustration" />
+                <h3 class="text-center text-2xl font-bold uppercase tracking-wider lg:text-3xl">
                     @yield('title')
                 </h3>
             </aside>
 
             <section class="flex-1 flex-shrink-0 space-y-4 pt-4">
-                <nav class="hidden md:block">
+                <nav class="hidden lg:block">
                     <ul class="flex flex-row gap-x-1.5 font-medium">
                         <x-nav-link routeName="welcome" label="Beranda" />
                         <x-nav-link routeName="attachments" label="Lampiran" />
                         <x-nav-link :redirect="true" :redirectLink="env('URL_WEB_PORTAL')" label="Web Portal" />
                     </ul>
                 </nav>
-                <div class="h-full w-full space-y-5 px-5 md:px-2 md:pt-4">
+                <div class="h-full w-full space-y-5 px-5 lg:px-2 lg:pt-4">
                     @yield('content')
                 </div>
             </section>
         </div>
-        <footer class="pb-24 text-center text-xs text-slate-500 md:pb-0 md:text-sm">
+        <footer class="pb-24 text-center text-xs text-slate-500 lg:pb-0 lg:text-sm">
             &copy; Indeks Pengelolaan Keuangan Daerah Kabupaten Donggala | All Right Reserved.
         </footer>
     </main>
