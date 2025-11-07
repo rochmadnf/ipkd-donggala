@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UploadFileResource;
 use App\Models\UploadFile;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
@@ -21,7 +22,11 @@ class UploadFileController extends Controller
 
     public function index(): View
     {
-        return view('pages.upload');
+        $files = UploadFile::latest()->get();
+
+        return view('pages.upload', [
+            'files' => UploadFileResource::collection($files)->resolve(),
+        ]);
     }
 
     public function store(Request $request)
@@ -43,7 +48,7 @@ class UploadFileController extends Controller
         );
 
         // store file
-        $filePath = Storage::disk('attachment')->putFileAs($validData['season'], $request->file('path'), $validData['name'] . "." . $request->file('path')->getClientOriginalExtension());
+        $filePath = Storage::disk('attachment')->putFileAs($validData['season'], $request->file('path'), $validData['name'] . "-" . time() .  "." . $request->file('path')->getClientOriginalExtension());
 
         // store to DB
         UploadFile::create([
@@ -56,5 +61,16 @@ class UploadFileController extends Controller
 
 
         return back()->with('success', 'Berkas berhasil di unggah.');
+    }
+
+    public function destroy(string $uuid)
+    {
+        $file = UploadFile::where('uuid', $uuid)->firstOrFail();
+
+        Storage::disk('attachment')->delete($file->path);
+
+        $file->delete();
+
+        return back()->with('success-del', "Berkas {$file->name} / {$file->season} berhasil dihapus.");
     }
 }

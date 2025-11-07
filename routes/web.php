@@ -13,4 +13,5 @@ Route::controller(Controllers\UploadFileController::class)->prefix('uploads')->g
 
     Route::get("/key=$randKey", 'index')->name('index.file');
     Route::post("/key=$randKey", 'store')->name('store.file');
+    Route::delete("/destroy/{uuid}", 'destroy')->name('delete.file');
 });
