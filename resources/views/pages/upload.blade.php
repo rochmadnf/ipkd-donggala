@@ -67,11 +67,11 @@
                 </div>
             </section>
 
-            <section class="w-2/4 space-y-4 rounded-md border border-slate-300/30 p-6">
+            {{-- <section class="w-2/4 space-y-4 rounded-md border border-slate-300/30 p-6">
                 <x-heading label="Daftar Berkas" detail="Daftar berkas yang telah di Unggah." />
-                {{-- List file after upload --}}
+                List file after upload
                 <h1>Coming Soon.</h1>
-            </section>
+            </section> --}}
         </main>
     </body>
 </html>
