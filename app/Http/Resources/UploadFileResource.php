@@ -16,6 +16,7 @@ class UploadFileResource extends JsonResource
     {
         return [
             'id' => $this->uuid,
+            'season' => $this->season,
             'filename' => $this->name,
             'filepath' => $this->path,
             'uploaded_at' => $this->uploaded_at,

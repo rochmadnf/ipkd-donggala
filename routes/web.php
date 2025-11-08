@@ -13,5 +13,6 @@ Route::controller(Controllers\UploadFileController::class)->prefix('uploads')->g
 
     Route::get("/key=$randKey", 'index')->name('index.file');
     Route::post("/key=$randKey", 'store')->name('store.file');
+    Route::patch("/update/{uuid}", 'update')->name('update.file');
     Route::delete("/destroy/{uuid}", 'destroy')->name('delete.file');
 });
