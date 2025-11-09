@@ -23,7 +23,7 @@ class AttachmentController extends Controller
         $initSeason = $request->has('season') ? (int) $request->season : $this->getLastSeason();
 
         if ($initSeason >= 1998 && $initSeason <= (int) now()->addYears(10)->format('Y')) {
-            $files = UploadFile::where('season', $initSeason)->orderBy('sequence')->get();
+            $files = UploadFile::where('season', $initSeason)->orderBy('uploaded_at', 'DESC')->get();
             return view('pages.attachments', ['files' => UploadFileResource::collection($files)->resolve(), 'initSeason' => $initSeason]);
         }
 
