@@ -22,7 +22,7 @@
 
     <div id="file-list" class="space-y-4 overflow-y-auto p-4 md:max-h-[320px]">
         @forelse ($files as $file)
-            <x-card-file :path="asset('files/' . $file['filepath'])" :name="$file['filename']" :upload_date="$file['uploaded_at']->translatedFormat('d M Y')" :order="$loop->iteration" />
+            <x-card-file :path="asset('files/' . $file['filepath'])" :name="$file['filename']" :upload_date="$file['uploaded_at']->translatedFormat('d M Y')" :order="$loop->iteration" :uuid="$file['id']" />
         @empty
             <div class="mb-4 flex items-center rounded-lg bg-blue-50 p-4 text-sm text-blue-800" role="alert">
                 <svg class="me-3 inline h-4 w-4 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"

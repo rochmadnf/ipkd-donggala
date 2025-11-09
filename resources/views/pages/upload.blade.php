@@ -27,7 +27,7 @@
                 @endsession
 
                 <form
-                    action="{{ $act === 'e-data' ? route('update.file', ['uuid' => $editFile['id']]) : route('store.file') }}"
+                    action="{{ $act === 'e-data' || $act === 'e-file' ? route('update.file', ['uuid' => $editFile['id']]) : route('store.file') }}"
                     method="POST" class="space-y-6" enctype="multipart/form-data"
                     onsubmit="this.querySelector('button[type=submit]').disabled=true; this.querySelector('button[type=submit]').innerText='Menyimpan berkas...';">
                     @csrf

@@ -1,4 +1,12 @@
-const previewElement = (fileName, uploadedAt, urlPath) => {
+const previewElement = async (fileName, uploadedAt, urlPath, uid) => {
+    const filePath = await fetch(`/api/get-path?uid=${uid}`)
+        .then((response) => response.json())
+        .catch(() => null);
+
+    if (filePath.status === 'success') {
+        urlPath = filePath.data.file_path;
+    }
+
     return `
 <div
     id="previewAttachment"
@@ -40,11 +48,11 @@ const previewElement = (fileName, uploadedAt, urlPath) => {
 `;
 };
 
-document.querySelectorAll('[data-preview]').forEach((item) => {
-    item.addEventListener('click', () => {
+document.querySelectorAll('[data-preview]').forEach(async (item) => {
+    item.addEventListener('click', async () => {
         document.body.insertAdjacentHTML(
             'afterbegin',
-            previewElement(item.dataset.filename, item.dataset.uploadAt, item.dataset.filepath),
+            await previewElement(item.dataset.filename, item.dataset.uploadAt, item.dataset.filepath, item.dataset.uid),
         );
     });
 });
